@@ -95,7 +95,7 @@ async function addroupas() {
 
   const modo = id > 0;
 
-  const endpoint = baseURL + (modo ? `/update/${id}` : `/create`); // ------------ operação ternaria
+  const endpoint = baseURL + (modo ? `/update/${id}` : `/create`); 
 
   const response = await fetch(endpoint, {
     method: modo ? 'put' : 'post',
@@ -132,7 +132,7 @@ async function addroupas() {
   fecharModalCadastro();
 }
 
-// ---------------------------------------------- Modal delete -----------------------------------
+
 function abrirModalDelete(id) {
   document.querySelector('#overlay-delete').style.display = 'flex';
 
