@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css"/>
+  <title>roupas</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="heading">Pesquise sua roupa</h1>
+      <div class="searchInputWrapper">
+        <input class="searchInput" type="number" id="idroupas" placeholder='Pesquise sua roupa'>
+        <button class="search" id="idroupasButton" onclick="FindByIdRoupas()">ESCOLHER</button>
+          <div id="roupaEscolhida">
+      </div>
+    </div>
+</header>
+
+<section class="button-modal-create">
+  <button type="button" class="default-button" onclick="abrirModal()">Cadastrar roupa</button>
+</section>
+
+<section class="modal-overlay" id="overlay">
+
+  <div class="modal">
+
+      <div class="modal-header">
+          <h2 id="title-header-modal">Cadastrar uma roupa</h2>
+          <a onclick="fecharModalCadastro()" class="close-modal">x</a>
+      </div>
+
+      <div class="modal-body">
+          <div>
+              <input type="text" name="sabor" id="nome" placeholder="nome da roupa">
+              <input type="number" name="preco" id="preco" placeholder="Preço da roupa">
+              <textarea type="text" name="descricao" id="descricao" placeholder="Descrição"
+                  rows="5"></textarea>
+              <input type="text" name="foto" id="foto" placeholder="Foto">
+              <input type="hidden" id="id">
+              <button class="test" onclick="addroupas()">Cadastrar</button>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="modal-overlay" id="overlay-delete">
+  <div class="modal">
+      <div class="modal-header">
+          <h2 id="title-header-modal">Confirmação de deleção</h2>
+          <a onclick="fecharModalDelete()" class="close-modal">x</a>
+      </div>
+      <div class="modal-body-delete">
+          <p>Deseja realmente apagar essa roupa?</p>
+          <div class="btns_delete">
+              <button class="btn_delete" onclick="fecharModalDelete()" >Não</button>
+              <button class="btn_delete "id="teste">Sim</button>
+          </div>
+      </div>
+  </div>
+</section>
+      <div class="roupasList" id="roupasList">
+      </div>
+    </div>
+  </div>
+    <script src="./js/index.js"></script>
+    
+</body>
+</html>

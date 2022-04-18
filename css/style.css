@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+  color: #a1a1a1;
+  font-family: sans-serif;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+}
+
+.roupasList {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.roupasListaItem {
+  border-radius: 5px;
+  box-shadow: 7px 7px 13px 0px rgba(219, 0, 0, 0.22);
+  padding: 36px;
+  margin: 20px;
+  width: 300px;
+  transition: all 0.3s ease-out;
+}
+
+.roupasListaItem:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.roupasListaItem h2 {
+  color: #45b319;
+  font-size: 20px;
+}
+.roupasListaItem p {
+  color: #45b319;
+  font-size: 20px;
+}
+.roupasListaItem__foto {
+  max-width: 260px;
+  max-height: 210px;
+}
+
+.roupasListaItem {
+  border-left: 3px solid #3bb54a;
+}
+.container {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.searchInputWrapper {
+  position: relative;
+}
+
+.searchInput {
+  width: 18rem;
+  height: 2rem;
+  padding: 0 1rem;
+  border-radius: 2rem;
+  border: none;
+  transition: transform 0.1s ease-in-out;
+}
+
+.searchInput:focus {
+  outline: none;
+  transform: scale(1.1);
+  transition: all 0.1s ease-in-out;
+}
+.modal-overlay {
+  background-color: #00000050;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.modal {
+  margin: 1;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  min-height: 300px;
+  background-color: aliceblue;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: radial-gradient(
+    farthest-corner at 40px 40px,
+    #0ad871 60%,
+    #1ee63f80 100%
+  );
+  padding: 1rem;
+}
+
+.modal-body {
+  padding: 0.5rem 0.1rem;
+}
+
+.modal-body div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-body div input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  outline: none;
+  border: solid 1px #eee;
+  margin-bottom: 0.4rem;
+  border-radius: 0.3rem;
+}
+.modal-body div button {
+  padding: 0.5rem;
+  width: 30%;
+  font-size: 1rem;
+  background-color: transparent;
+  color: aqua;
+  border: solid 1px #0ad871;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.modal-body div button:hover {
+  background-color: #0ad871;
+  color: #fff;
+}
+.close-modal {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.5rem;
+  transform: scale(0.7);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  transform: scale(1);
+}
+.search {
+  font-size: 17px;
+  padding: 0.3rem 0.4rem;
+  border: transparent;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  background: dodgerblue;
+  color: white;
+  border-radius: 4px;
+ }
+ 
+ .search:hover {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+ }
+ 
+ .search:active {
+   
+  transform: translate(0em, 0.2em);
+ }
+
+ .btn {
+   border: none;
+   color: rgb(231, 0, 0);
+   border-radius: .3rem;
+   padding: .5rem;
+   max-width: 280px;
+   text-align: center;
+   text-transform: uppercase;
+   cursor: pointer;
+   width: 48%;
+ }
+ 
+ .editar {
+   color: rgb(228, 15, 15);
+   border:solid 1px #65cf9a;
+   background-color: transparent;
+ }
+
+ .apagar {
+  color: rgb(192, 22, 192);
+  border:solid 1px #db0da8;
+  background-color: transparent;
+ }
+
+ .default-button{
+  display: flex;
+  justify-content: center;
+  padding: 12px 22px;
+ 
+  background: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 2px;
+  border: 2px solid rgba(0,0,0,0.2);
+  text-align: center;
+ }
+ .button-modal-create{
+   display: flex;
+   justify-content: center;
+ }
+ .btn_delete {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 12px 22px;
+  background: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 2px;
+  border: 2px solid rgba(0,0,0,0.2);
+  text-align: center;
+ }
+ .btn {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 12px 22px;
+  background: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 2px;
+  border: 2px solid rgba(0,0,0,0.2);
+  text-align: center;
+ }
+
+ @media only screen and (max-device-width: 600px) {
+  .search {
+    width: auto;
+    margin: 1em 2em;
+  }
+}
+
+@media only screen and (max-device-width: 600px) {
+  .searchInput {
+    width: 6rem;
+
+  }
+}
+  
